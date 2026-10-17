@@ -2,12 +2,13 @@ import { expect, type Locator, type Page } from "@playwright/test";
 
 type AriaRole = Parameters<Page["getByRole"]>[0];
 const currencyAmount = /[$€£¥]\s?\d{1,3}(?:,\d{3})*(?:\.\d{2})/;
+const frontendOrigin = "https://practicesoftwaretesting.com/";
 
 export class BasePage {
   constructor(protected readonly page: Page) {}
 
-  async open(url: string): Promise<void> {
-    await this.page.goto(url);
+  async open(path: string): Promise<void> {
+    await this.page.goto(new URL(path, frontendOrigin).toString());
   }
 
   text(value: string): Locator {
