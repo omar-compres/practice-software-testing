@@ -23,7 +23,7 @@ test("TC-002 - Each visible card shows a product name and a price", {
   await expect(home.priceFor("Combination Pliers")).toBeVisible();
 });
 
-test("TC-003 - sort", {
+test("TC-003 - The catalog sorts products by price", {
   tag: ["@smoke", "@ticket-AIQA-142"],
   annotation: { type: "test_management_id", description: "AIQA-TC-8" },
 }, async ({ page, request }) => {
@@ -36,7 +36,7 @@ test("TC-003 - sort", {
   await home.expectResultsChanged(beforeResults);
 });
 
-test("TC-004 - search", {
+test("TC-004 - The catalog search returns matching products", {
   tag: ["@smoke", "@ticket-AIQA-142"],
   annotation: { type: "test_management_id", description: "AIQA-TC-9" },
 }, async ({ page, request }) => {
@@ -50,7 +50,7 @@ test("TC-004 - search", {
   await home.expectResultsChanged(beforeResults);
 });
 
-test("TC-005 - category filters", {
+test("TC-005 - Category filters update the product catalog", {
   tag: ["@smoke", "@ticket-AIQA-142"],
   annotation: { type: "test_management_id", description: "AIQA-TC-10" },
 }, async ({ page, request }) => {
@@ -63,7 +63,7 @@ test("TC-005 - category filters", {
   await home.expectResultsChanged(beforeResults);
 });
 
-test("TC-006 - brand filters", {
+test("TC-006 - Brand filters update the product catalog", {
   tag: ["@smoke", "@ticket-AIQA-142"],
   annotation: { type: "test_management_id", description: "AIQA-TC-11" },
 }, async ({ page, request }) => {
@@ -76,7 +76,7 @@ test("TC-006 - brand filters", {
   await home.expectResultsChanged(beforeResults);
 });
 
-test("TC-007 - page controls", {
+test("TC-007 - Page controls display another catalog page", {
   tag: ["@smoke", "@ticket-AIQA-142"],
   annotation: { type: "test_management_id", description: "AIQA-TC-12" },
 }, async ({ page, request }) => {
