@@ -19,7 +19,7 @@ export class BasePage {
   }
 
   priceFor(label: string): Locator {
-    return this.page.getByRole("link", { name: label, exact: true }).getByText(currencyAmount);
+    return this.page.getByRole("link", { name: label }).getByText(currencyAmount);
   }
 
   async resultsSignature(): Promise<string> {
