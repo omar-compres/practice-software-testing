@@ -6,8 +6,8 @@ const currencyAmount = /[$€£¥]\s?\d{1,3}(?:,\d{3})*(?:\.\d{2})/;
 export class BasePage {
   constructor(protected readonly page: Page) {}
 
-  async open(url: string): Promise<void> {
-    await this.page.goto(url);
+  async open(path: string): Promise<void> {
+    await this.page.goto(path);
   }
 
   text(value: string): Locator {
