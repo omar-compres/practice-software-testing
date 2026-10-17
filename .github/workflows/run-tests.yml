@@ -14,7 +14,6 @@ jobs:
     runs-on: ubuntu-22.04
     env:
       STORAGE_STATE_PATH: .auth/ci-storage-state.json
-      target_AUT_FE: https://practicesoftwaretesting.com
     steps:
       - name: Checkout ⚙️
         uses: actions/checkout@v4
